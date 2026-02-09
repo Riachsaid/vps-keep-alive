@@ -1,12 +1,14 @@
 name: Stay Alive VPS
+
 on:
   schedule:
-    - cron: '*/10 * * * *' # يخدم كل 10 دقائق
-  workflow_dispatch: # تقدر تشغله يدوياً
+    - cron: '*/5 * * * *' # يراقب كل 5 دقائق
+  workflow_dispatch: # تقدر تطلقه بيدك
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Cloudflare Tunnel
-        run: curl -I https://trees-republicans-news-chassis.trycloudflare.com
+      - name: Ping Cloudflare Worker
+        run: |
+          curl -I https://cloud.klasiinkov.workers.dev
