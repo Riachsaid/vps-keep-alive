@@ -1,0 +1,14 @@
+name: VPS Keep Alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # يخدم كل 10 دقائق
+  workflow_dispatch: # يخليك تطلقه بيدك
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check VPS Status
+        run: |
+          curl -I https://municipal-highly-pathology-recognize.trycloudflare.com
