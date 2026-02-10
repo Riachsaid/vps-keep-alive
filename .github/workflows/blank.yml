@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Check VPS Status
         run: |
-          curl -I https://municipal-highly-pathology-recognize.trycloudflare.com
+          curl -I https://archived-fuji-sweet-reid.trycloudflare.com
